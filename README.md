@@ -58,7 +58,7 @@ This content is part of a broader workplace safety training initiative.
 # Task-3.4
 # KM-01-KT18 Operating Systems Blog
 
-This blog post presents a comparison between Windows, macOS, and Linux based strictly on the learner guide module KM-01-KT18.
+This blog post presents a comparison between Windows, macOS, and Linux.
 
 ![Social Card](https://socialify.git.ci/MRNMT/task-3.4/image?description=1&font=Source%20Code%20Pro&owner=1&pattern=Plus&theme=Light)
 
