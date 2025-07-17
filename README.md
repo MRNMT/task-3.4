@@ -57,3 +57,8 @@ This content is part of a broader workplace safety training initiative.
 
 # Task-3.4
 
+# Blog Post: Comparing Windows, macOS, and Linux Operating Systems
+
+This blog post compares the three major operating systems—Windows, macOS, and Linux—based on file systems, directory structure, naming conventions, and how they handle executable files and scripts.
+
+![Social Card](https://socialify.git.ci/MRNMT/Task-3.4/image?description=1&font=Source%20Code%20Pro&owner=1&pattern=Plus&theme=Light)
