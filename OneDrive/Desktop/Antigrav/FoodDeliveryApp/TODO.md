@@ -1,5 +1,0 @@
-- [x] Remove the TouchableOpacity for IconGallery from src/screens/LoginScreen.js
-- [x] Remove IconGallery import and Stack.Screen from src/navigation/RootNavigator.js
-- [x] Delete src/screens/IconGalleryScreen.js
-- [x] Add more food items to src/data/mockData.js (pizzas and related items)
-- [x] Add light mode theme toggle
