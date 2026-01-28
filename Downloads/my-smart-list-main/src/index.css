@@ -1,0 +1,237 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Lexend:wght@300;400;500;600;700&display=swap');
+
+/* Fresh Shopping App Design System - Clean Greens & Modern Aesthetic */
+
+@layer base {
+  :root {
+    /* Fresh green palette - energetic and grocery-inspired */
+    --background: 120 20% 98%;
+    --foreground: 160 30% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 160 30% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 160 30% 15%;
+
+    /* Primary - Fresh teal green */
+    --primary: 158 64% 42%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Soft sage */
+    --secondary: 145 25% 92%;
+    --secondary-foreground: 160 30% 25%;
+
+    --muted: 140 15% 94%;
+    --muted-foreground: 160 15% 45%;
+
+    /* Accent - Warm coral for actions */
+    --accent: 16 85% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 145 20% 88%;
+    --input: 145 20% 90%;
+    --ring: 158 64% 42%;
+
+    --radius: 0.75rem;
+
+    /* Category colors */
+    --category-groceries: 158 64% 42%;
+    --category-dairy: 199 89% 48%;
+    --category-meat: 0 72% 51%;
+    --category-bakery: 30 80% 55%;
+    --category-beverages: 280 68% 50%;
+    --category-frozen: 199 89% 68%;
+    --category-snacks: 45 93% 47%;
+    --category-household: 215 25% 50%;
+    --category-personal-care: 330 65% 55%;
+    --category-other: 160 15% 45%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(158, 64%, 42%) 0%, hsl(170, 55%, 35%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(16, 85%, 60%) 0%, hsl(30, 80%, 55%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(158, 64%, 95%) 0%, hsl(170, 45%, 92%) 50%, hsl(145, 35%, 96%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0, 0%, 100%) 0%, hsl(140, 20%, 98%) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(158 30% 40% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(158 30% 40% / 0.1), 0 2px 4px -2px hsl(158 30% 40% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(158 30% 40% / 0.1), 0 4px 6px -4px hsl(158 30% 40% / 0.1);
+    --shadow-xl: 0 20px 25px -5px hsl(158 30% 40% / 0.1), 0 8px 10px -6px hsl(158 30% 40% / 0.1);
+    --shadow-glow: 0 0 20px hsl(158 64% 42% / 0.3);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 160 25% 8%;
+    --foreground: 145 20% 95%;
+
+    --card: 160 20% 12%;
+    --card-foreground: 145 20% 95%;
+
+    --popover: 160 20% 12%;
+    --popover-foreground: 145 20% 95%;
+
+    --primary: 158 55% 50%;
+    --primary-foreground: 160 30% 10%;
+
+    --secondary: 160 20% 18%;
+    --secondary-foreground: 145 20% 90%;
+
+    --muted: 160 15% 18%;
+    --muted-foreground: 145 15% 60%;
+
+    --accent: 16 75% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 160 15% 20%;
+    --input: 160 15% 22%;
+    --ring: 158 55% 50%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(158, 55%, 45%) 0%, hsl(170, 50%, 38%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(160, 25%, 10%) 0%, hsl(170, 20%, 8%) 50%, hsl(150, 15%, 12%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(160, 20%, 12%) 0%, hsl(160, 15%, 10%) 100%);
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lexend', sans-serif;
+    @apply font-semibold tracking-tight;
+  }
+}
+
+@layer components {
+  /* Card hover effects */
+  .card-hover {
+    @apply transition-all duration-300 ease-out;
+  }
+  
+  .card-hover:hover {
+    @apply -translate-y-1;
+    box-shadow: var(--shadow-lg);
+  }
+
+  /* Input focus styles */
+  .input-focus {
+    @apply transition-all duration-200;
+  }
+
+  .input-focus:focus {
+    box-shadow: 0 0 0 3px hsl(var(--primary) / 0.15);
+  }
+
+  /* Button gradient styles */
+  .btn-gradient-primary {
+    background: var(--gradient-primary);
+    @apply text-primary-foreground font-medium;
+  }
+
+  .btn-gradient-accent {
+    background: var(--gradient-accent);
+    @apply text-accent-foreground font-medium;
+  }
+
+  /* Hero gradient background */
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  /* Glass effect */
+  .glass {
+    @apply bg-card/80 backdrop-blur-md;
+  }
+
+  /* Category badge colors */
+  .category-groceries { background-color: hsl(var(--category-groceries) / 0.15); color: hsl(var(--category-groceries)); }
+  .category-dairy { background-color: hsl(var(--category-dairy) / 0.15); color: hsl(var(--category-dairy)); }
+  .category-meat { background-color: hsl(var(--category-meat) / 0.15); color: hsl(var(--category-meat)); }
+  .category-bakery { background-color: hsl(var(--category-bakery) / 0.15); color: hsl(var(--category-bakery)); }
+  .category-beverages { background-color: hsl(var(--category-beverages) / 0.15); color: hsl(var(--category-beverages)); }
+  .category-frozen { background-color: hsl(var(--category-frozen) / 0.15); color: hsl(var(--category-frozen)); }
+  .category-snacks { background-color: hsl(var(--category-snacks) / 0.15); color: hsl(var(--category-snacks)); }
+  .category-household { background-color: hsl(var(--category-household) / 0.15); color: hsl(var(--category-household)); }
+  .category-personal-care { background-color: hsl(var(--category-personal-care) / 0.15); color: hsl(var(--category-personal-care)); }
+  .category-other { background-color: hsl(var(--category-other) / 0.15); color: hsl(var(--category-other)); }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out forwards;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.3s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    from { 
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to { 
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scaleIn {
+    from { 
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to { 
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
